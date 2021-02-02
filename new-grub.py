@@ -1,4 +1,4 @@
-with open('/etc/default/grub', 'r') as gf:
+with open('/mnt/etc/default/grub', 'r') as gf:
     lines = gf.readlines()
 
 
@@ -9,5 +9,5 @@ for line in lines:
         line = new_line
     new_grub.append(line)
 
-with open('/etc/default/grub.new', 'w') as gf:
+with open('/mnt/etc/default/grub.new', 'w') as gf:
     gf.write("\n".join(new_grub))
